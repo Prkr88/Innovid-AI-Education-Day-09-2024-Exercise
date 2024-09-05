@@ -37,7 +37,7 @@ Welcome to the AI-Powered Application Exercises repository! This repository cont
 - Find and display a relevant Spotify playlist.
 
 
-# Prerequisites :Python Setup Guide for macOS
+# Prerequisites: Python Setup Guide for macOS
 
 This guide will walk you through the process of installing Python 3, setting up a virtual environment, and installing requirements on macOS.
 
