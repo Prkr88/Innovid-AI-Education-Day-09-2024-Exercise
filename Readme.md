@@ -87,7 +87,7 @@ This guide will walk you through the process of installing Python 3, setting up 
    source myenv/bin/activate
    ```
 
-   You should see `(myenv)` at the beginning of your terminal prompt.
+   After running the command in bullet 3, you should see `(myenv)` at the beginning of your terminal prompt.
 
 ## 3. Installing Requirements
 
@@ -104,5 +104,48 @@ When you're done working on your project, you can deactivate the virtual environ
 deactivate
 ```
 
-Remember to activate your virtual environment each time you work on your project.
+## Activating the Virtual Environment
+Remember to activate your virtual environment each time you work on your project, by running:
+```
+source myenv/bin/activate
+```
+
+## Run Locally - Terminal Commands
+1. Navigate to the project directory:
+   ```
+   cd /path/to/your/project
+   ```
+2. Activate the virtual environment:
+   ```
+   source myenv/bin/activate
+   ```
+3. Run the script:
+   ```
+   python3 workshop/task1_formated_azure.py
+   ```
+4. There are warnings in the output, ignore them.
+
+
+## Run With Intellij
+1. Navigate to the project structure: File -> Project Structure.
+2. Click on the SDK dropdown and select the Python SDK -> Add SDK -> Python SDK.
+3. Add the virtual environment as the interpreter:
+    - Click on Virtualenv Environment (on the right)
+    - Existing environment
+    - ... (3 dots)
+    - Enter the path to the virtual environment (myenv) -> OK 
+4. Right-click on the script file (task1_formated_azure.py) -> Run 'task1_formated_azure'.
+5. There are warnings in the output, ignore them.
+
+
+## Common Issues
+* ModuleNotFoundError: No module named 'dotenv'
+  * Seems like the requirements installation didn't work properly. Try running `which python3` to install the missing module.
+  * The output should be something like `<working directory path>/myenv/bin/python3`. If it's not, python3 command is not pointing to the virtual environment.
+  * Run `unalias python3` to remove the alias. 
+  * Run `source myenv/bin/activate` to activate the virtual environment.
+  * Then run `which python3` again and make sure the output is `<working directory path>/myenv/bin/python3`.
+  * Run the script again `python3 workshop/task1_formated_azure.py` and it should work.
+* Importing PromptTemplate from langchain root module is no longer supported
+  * This is a warning and can be ignored. The script should work fine.
 

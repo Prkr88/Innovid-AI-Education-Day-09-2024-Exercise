@@ -22,6 +22,7 @@ sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(
     client_secret=os.getenv("SPOTIFY_CLIENT_SECRET")
 ))
 
+
 def generate_workout_plan(goals, equipment, preferences):
     """
     Generates a workout plan based on user input (goals, available equipment, and preferences)
@@ -37,6 +38,7 @@ def generate_workout_plan(goals, equipment, preferences):
     """
     pass
 
+
 def extract_exercises_with_gpt(workout_plan):
     """
     Extracts the exercise names from a workout plan using Azure OpenAI.
@@ -48,6 +50,7 @@ def extract_exercises_with_gpt(workout_plan):
         list: A list of extracted exercise names.
     """
     pass
+
 
 def generate_exercise_image(exercise):
     """
@@ -61,6 +64,7 @@ def generate_exercise_image(exercise):
     """
     pass
 
+
 def search_for_spotify_playlist(workout_type):
     """
     Searches Spotify for a workout playlist based on workout type.
@@ -72,6 +76,5 @@ def search_for_spotify_playlist(workout_type):
         tuple: Spotify playlist URL and name, or (None, None) if no playlist is found.
     """
     pass
-
 
 # Streamlit setup for the web app

@@ -1,3 +1,4 @@
+from dotenv import find_dotenv, load_dotenv
 import streamlit as st
 from PIL import Image
 from io import BytesIO
@@ -5,10 +6,13 @@ import requests
 import json
 from transformers import AutoImageProcessor, AutoModelForImageClassification
 from langchain import OpenAI, LLMChain, PromptTemplate
+import os
+
+load_dotenv(find_dotenv())
 
 # Set OpenAI and Hugging Face API keys
-openai_api_key = 'sk-proj-NQejuW74NI1INeyINjdqT3BlbkFJd2gDTCmESkzvMNakxcoc'
-hf_api_token = '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'
+openai_api_key = os.getenv('OPENAI_API_KEY')
+hf_api_token = os.getenv('HUGGING_FACE_TOKEN')
 
 
 # Initialize LangChain OpenAI LLM
@@ -27,7 +31,6 @@ Combined Dog Description:
 # Create a LangChain prompt template
 template = PromptTemplate(input_variables=["description1", "description2"], template=prompt_template)
 chain = LLMChain(llm=llm, prompt=template)
-
 
 
 def extract_dog_description(url):
@@ -50,6 +53,8 @@ def extract_dog_description(url):
     predicted_class_idx = logits.argmax(-1).item()
     print("Predicted class:", model.config.id2label[predicted_class_idx])
     return model.config.id2label[predicted_class_idx]
+
+
 # Function to generate a combined description using LangChain
 def generate_combined_description(description1, description2):
     combined_description = chain.run(description1=description1, description2=description2)

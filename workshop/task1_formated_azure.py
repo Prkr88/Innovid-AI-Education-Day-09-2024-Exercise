@@ -6,12 +6,14 @@ import os
 # Load environment variables from a .env file
 load_dotenv(find_dotenv())
 
+
 # Function to convert an image to text using a pre-trained image captioning model
 def extract_description_from_image(url):
     """
     Convert an image to text using a pre-trained image captioning model.
     """
     pass
+
 
 # Function to generate a story based on a given scenario using LangChain
 def generate_story(scenario):
@@ -20,6 +22,7 @@ def generate_story(scenario):
     """
     pass
 
+
 # Function to convert text to speech using a pre-trained model
 def convert_story_to_speech(message):
     """
@@ -27,5 +30,5 @@ def convert_story_to_speech(message):
     """
     pass
 
-# Streamlit setup for the web app
 
+# Streamlit setup for the web app

@@ -8,3 +8,5 @@ langchain
 datasets
 soundfile
 spotipy
+openai
+python-dotenv
