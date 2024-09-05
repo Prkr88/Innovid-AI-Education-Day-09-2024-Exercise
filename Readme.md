@@ -36,7 +36,73 @@ Welcome to the AI-Powered Application Exercises repository! This repository cont
 - Visualize exercises with generated images.
 - Find and display a relevant Spotify playlist.
 
-### Prerequisites
 
-Ensure you have Python 3.7+ installed on your system. You will also need to set up credentials for the APIs used in these exercises.
-(more about that inside the exercises)
+# Prerequisites :Python Setup Guide for macOS
+
+This guide will walk you through the process of installing Python 3, setting up a virtual environment, and installing requirements on macOS.
+
+## 1. Installing Python 3
+
+### Using Homebrew (Recommended)
+
+1. Install Homebrew if you haven't already:
+   ```
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
+
+2. Install Python 3:
+   ```
+   brew install python
+   ```
+
+3. Verify the installation:
+   ```
+   python3 --version
+   ```
+
+### Alternative: Using the Official Installer
+
+1. Visit the official Python website: https://www.python.org/downloads/
+2. Download the latest Python 3 installer for macOS
+3. Run the installer and follow the prompts
+4. Verify the installation:
+   ```
+   python3 --version
+   ```
+
+## 2. Setting up a Virtual Environment
+
+1. Navigate to your project directory:
+   ```
+   cd /path/to/your/project
+   ```
+
+2. Create a new virtual environment:
+   ```
+   python3 -m venv myenv
+   ```
+
+3. Activate the virtual environment:
+   ```
+   source myenv/bin/activate
+   ```
+
+   You should see `(myenv)` at the beginning of your terminal prompt.
+
+## 3. Installing Requirements
+
+1. Make sure your virtual environment is activated
+
+2. If you have a `requirements.txt` file, install the requirements:
+   ```
+   pip install -r requirements.txt
+   ```
+## Deactivating the Virtual Environment
+
+When you're done working on your project, you can deactivate the virtual environment:
+```
+deactivate
+```
+
+Remember to activate your virtual environment each time you work on your project.
+
