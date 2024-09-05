@@ -5,3 +5,6 @@ datasets
 soundfile
 torch
 langchain
+datasets
+soundfile
+spotipy
