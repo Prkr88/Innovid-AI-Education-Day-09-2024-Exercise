@@ -1,0 +1,7 @@
+streamlit
+python-dotenv
+transformers
+datasets
+soundfile
+torch
+langchain
