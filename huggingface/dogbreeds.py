@@ -1,8 +1,8 @@
 from transformers import AutoImageProcessor, AutoModelForImageClassification
 from PIL import Image
 
-url = "/Users/matanparker/Desktop/cc7.jpg"
-image = Image.open(url)
+picture_path = "<A_PICTURE_OF_A_DOG>"
+image = Image.open(picture_path)
 
 # Load the image processor and model
 image_processor = AutoImageProcessor.from_pretrained("wesleyacheng/dog-breeds-multiclass-image-classification-with-vit")
