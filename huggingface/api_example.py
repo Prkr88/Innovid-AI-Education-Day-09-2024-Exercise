@@ -1,7 +1,7 @@
 import requests
 
 API_URL = "https://api-inference.huggingface.co/models/facebook/musicgen-stereo-small"
-headers = {"Authorization": "Bearer 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"}
+headers = {"Authorization": "Bearer <YOUR_HUGGIGNGFACE_TOKEN>"}
 
 def query(payload):
 	response = requests.post(API_URL, headers=headers, json=payload)
