@@ -1,7 +1,14 @@
 import requests
+from dotenv import find_dotenv, load_dotenv
+import os
+
+load_dotenv(find_dotenv())
 
 API_URL = "https://api-inference.huggingface.co/models/facebook/musicgen-stereo-small"
-headers = {"Authorization": "Bearer <YOUR_HUGGIGNGFACE_TOKEN>"}
+headers = {
+	"Authorization": f"Bearer {os.getenv('HUGGINGFACEHUB_API_TOKEN')}",
+	"Content-Type": "application/json"
+}
 
 def query(payload):
 	response = requests.post(API_URL, headers=headers, json=payload)
