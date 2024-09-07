@@ -10,3 +10,6 @@ soundfile
 spotipy
 openai
 python-dotenv
+langchain-community
+langchain-anthropic
+langchain-google-genai
