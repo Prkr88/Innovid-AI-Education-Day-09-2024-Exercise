@@ -33,8 +33,8 @@ template = PromptTemplate(input_variables=["description1", "description2"], temp
 chain = LLMChain(llm=llm, prompt=template)
 
 
-def extract_dog_description(url):
-    image = Image.open(url)
+def extract_dog_description(file):
+    image = Image.open(file).convert('RGB')  # Convert to RGB format to ensure consistency
 
     # Load the image processor and model
     image_processor = AutoImageProcessor.from_pretrained(
@@ -64,8 +64,8 @@ def generate_combined_description(description1, description2):
 # Function to generate a new dog image based on combined description using Hugging Face model
 def generate_combined_dog_image(description):
     # url = "https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-schnell"
-    # url = "https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-dev"
-    url = "https://api-inference.huggingface.co/models/CompVis/stable-diffusion-v1-4"
+    url = "https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-dev"
+    # url = "https://api-inference.huggingface.co/models/CompVis/stable-diffusion-v1-4"
 
     headers = {
         "Authorization": f"Bearer {hf_api_token}",
