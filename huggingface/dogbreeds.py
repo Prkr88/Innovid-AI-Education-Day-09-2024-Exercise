@@ -1,7 +1,7 @@
 from transformers import AutoImageProcessor, AutoModelForImageClassification
 from PIL import Image
 
-picture_path = "/Users/matanparker/Documents/AiEducationDayPictures/CleanShot 2024-09-02 at 10.02.15.jpeg"
+picture_path = "<A_PICTURE_OF_A_DOG>"
 image = Image.open(picture_path)
 
 # Load the image processor and model
