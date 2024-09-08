@@ -14,7 +14,7 @@ from langchain import LLMChain, PromptTemplate
 load_dotenv(find_dotenv())
 
 # Set up OpenAI API using credentials stored in environment variables
-client = openai.OpenAI(api_key=os.getenv("AZURE_OPENAI_ENDPOINT"))
+client = openai.OpenAI(api_key=os.getenv("AZURE_OPENAI_API_KEY"))
 
 # Set up Spotify API using client credentials from environment variables
 sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(
